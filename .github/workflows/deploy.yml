@@ -42,10 +42,11 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
+    env:
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      PORT: 3000
     steps:
       - name: Output information
-        env:
-          PORT: 3000
         run: |        
           echo "MONGODB_DB_NAME: $MONGODB_DB_NAME"
           echo "MONGODB_USERNAME: $MONGODB_USERNAME"
