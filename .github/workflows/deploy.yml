@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
-      PORT: 3000
+      PORT: 27017
     steps:
       - name: Output information
         run: |        
